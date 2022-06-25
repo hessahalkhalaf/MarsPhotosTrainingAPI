@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/lenovo/Downloads/android-basics-kotlin-mars-photos-app-starter (AAAPPPIII!!!!!!!)/android-basics-kotlin-mars-photos-app-starter/app/src/main/res/drawable/ic_broken_image.xml" value="0.1" />
+        <entry key="..\:/Users/lenovo/Downloads/android-basics-kotlin-mars-photos-app-starter (AAAPPPIII!!!!!!!)/android-basics-kotlin-mars-photos-app-starter/app/src/main/res/drawable/loading_img.xml" value="0.1" />
+        <entry key="..\:/Users/lenovo/Downloads/android-basics-kotlin-mars-photos-app-starter (AAAPPPIII!!!!!!!)/android-basics-kotlin-mars-photos-app-starter/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/lenovo/Downloads/android-basics-kotlin-mars-photos-app-starter (AAAPPPIII!!!!!!!)/android-basics-kotlin-mars-photos-app-starter/app/src/main/res/layout/fragment_overview.xml" value="0.1" />
         <entry key="..\:/Users/lenovo/Downloads/android-basics-kotlin-mars-photos-app-starter (AAAPPPIII!!!!!!!)/android-basics-kotlin-mars-photos-app-starter/app/src/main/res/layout/grid_view_item.xml" value="0.1" />
       </map>

@@ -30,8 +30,8 @@ import kotlinx.coroutines.launch
 class OverviewViewModel : ViewModel() {
 
 
-    private val _photos = MutableLiveData<MarsPhoto>()
-    val photos: LiveData<MarsPhoto> = _photos
+    private val _photos = MutableLiveData<List<MarsPhoto>>()
+    val photos: LiveData<List<MarsPhoto>> = _photos
 
 
     // The internal MutableLiveData that stores the status of the most recent request
@@ -58,10 +58,10 @@ class OverviewViewModel : ViewModel() {
     private fun getMarsPhotos() {
         viewModelScope.launch {
             try {
-                _photos.value = MarsApi.retrofitService.getPhotos()[0]
+                _photos.value = MarsApi.retrofitService.getPhotos()
 
 //                val listResult = MarsApi.retrofitService.getPhotos()
-                _status.value = "   First Mars image URL : ${_photos.value!!.imgSrcUrl}"
+                _status.value = " Success : Mars properties retrieved"
             }
             catch (e:Exception){
                 _status.value = "Failure: ${e.message}"
