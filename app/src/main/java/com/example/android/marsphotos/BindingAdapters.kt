@@ -1,11 +1,13 @@
 package com.example.android.marsphotos
 
+import android.view.View
 import android.widget.ImageView
 import androidx.core.net.toUri
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import com.example.android.marsphotos.network.MarsPhoto
+import com.example.android.marsphotos.overview.MarsApiStatus
 import com.example.android.marsphotos.overview.PhotoGridAdapter
 
 
@@ -41,3 +43,25 @@ fun bindingImage(imgViewBA :ImageView, imgUrlBA :String?){
     }
 }
 
+
+@BindingAdapter("marsApiStatusBA")
+fun bindStatus(statusImageView11: ImageView, statusBA: MarsApiStatus?) {
+
+    when (statusBA) {
+
+        MarsApiStatus.LOADING -> {
+            statusImageView11.visibility = View.VISIBLE
+            statusImageView11.setImageResource(R.drawable.loading_animation)
+        }
+         MarsApiStatus.ERROR ->{
+             statusImageView11.visibility=View.VISIBLE
+             statusImageView11.setImageResource(R.drawable.ic_connection_error)
+         }
+
+        MarsApiStatus.DONE -> {
+            statusImageView11.visibility = View.GONE
+        }
+
+
+    }
+}
